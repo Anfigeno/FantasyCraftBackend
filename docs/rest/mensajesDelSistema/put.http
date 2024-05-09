@@ -1,0 +1,6 @@
+PUT {{APP_URL}}/api/mensajes_del_sistema
+Content-type: application/json
+
+{
+    "bienvenida": "Hola hijo de la remil"
+}

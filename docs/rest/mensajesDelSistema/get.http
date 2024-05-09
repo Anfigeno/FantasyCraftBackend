@@ -1,0 +1,1 @@
+GET {{APP_URL}}/api/mensajes_del_sistema
