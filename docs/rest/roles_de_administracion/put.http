@@ -1,0 +1,7 @@
+PUT {{APP_URL}}/api/roles_de_administracion
+Content-type: application/json
+
+{
+    "id_administrador": "399399393dddddddd",
+    "id_staff": "8848488944dddaa"
+}

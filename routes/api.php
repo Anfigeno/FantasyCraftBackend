@@ -3,6 +3,7 @@
 use App\Http\Controllers\CanalesImportantesController;
 use App\Http\Controllers\ComandoPersonalizadoController;
 use App\Http\Controllers\MensajesDelSistemaController;
+use App\Http\Controllers\RolesDeAdministracionController;
 use App\Http\Controllers\TicketsController;
 use Illuminate\Support\Facades\Route;
 
@@ -33,4 +34,11 @@ Route::controller(ComandoPersonalizadoController::class)
         Route::get('/', 'listar');
         Route::get('/{palabra_clave}', 'obtener');
         Route::put('/', 'insertar');
+    });
+
+Route::controller(RolesDeAdministracionController::class)
+    ->prefix('roles_de_administracion')
+    ->group(function () {
+        Route::get('/', 'listar');
+        Route::put('/', 'actualizar');
     });
