@@ -23,7 +23,7 @@ class TicketsController extends Controller
         return response()->json($tickets, 200);
     }
 
-    public function insertar(Request $request): JsonResponse|Response
+    public function actualizar(Request $request): JsonResponse|Response
     {
         $datos = $request->all();
         $validador = Validator::make($datos, [
