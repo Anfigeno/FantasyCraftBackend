@@ -1,0 +1,6 @@
+PUT {{APP_URL}}/api/tickets
+Content-Type: application/json
+
+{
+    "id_categoria": "28828828399"
+}
