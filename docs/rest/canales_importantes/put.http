@@ -1,0 +1,8 @@
+PUT {{APP_URL}}/api/canales_importantes
+Content-type: application/json
+
+{
+    "id_general": "13983894839894",
+    "id_votaciones": "4893434dddddd",
+    "id_sugerencias": "caribeña si suena"
+}
