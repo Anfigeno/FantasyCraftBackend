@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CanalesImportantesController;
+use App\Http\Controllers\ComandoPersonalizadoController;
 use App\Http\Controllers\MensajesDelSistemaController;
 use App\Http\Controllers\TicketsController;
 use Illuminate\Support\Facades\Route;
@@ -24,4 +25,12 @@ Route::controller(CanalesImportantesController::class)
     ->group(function () {
         Route::get('/', 'listar');
         Route::put('/', 'actualizar');
+    });
+
+Route::controller(ComandoPersonalizadoController::class)
+    ->prefix('comandos_personalizados')
+    ->group(function () {
+        Route::get('/', 'listar');
+        Route::get('/{palabra_clave}', 'obtener');
+        Route::put('/', 'insertar');
     });

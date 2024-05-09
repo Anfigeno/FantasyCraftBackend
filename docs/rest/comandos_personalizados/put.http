@@ -1,0 +1,10 @@
+PUT {{APP_URL}}/api/comandos_personalizados
+Content-type: application/json
+
+[
+    {
+        "palabra_clave": "asereje",
+        "contenido": "Hola mucho gusto mi nombre es xexexe",
+        "autor": "Leonardo2008"
+    }
+]
