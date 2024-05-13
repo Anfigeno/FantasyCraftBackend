@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CanalesImportantesController;
 use App\Http\Controllers\ComandoPersonalizadoController;
+use App\Http\Controllers\EmbedsController;
 use App\Http\Controllers\MensajesDelSistemaController;
 use App\Http\Controllers\RolesDeAdministracionController;
 use App\Http\Controllers\TicketsController;
@@ -38,6 +39,13 @@ Route::controller(ComandoPersonalizadoController::class)
 
 Route::controller(RolesDeAdministracionController::class)
     ->prefix('roles_de_administracion')
+    ->group(function () {
+        Route::get('/', 'listar');
+        Route::put('/', 'actualizar');
+    });
+
+Route::controller(EmbedsController::class)
+    ->prefix('embeds')
     ->group(function () {
         Route::get('/', 'listar');
         Route::put('/', 'actualizar');
