@@ -1,1 +1,1 @@
-GET {{APP_URL}}/api/comandos_personalizados/asereje
+GET {{APP_URL}}/api/comandos_personalizados/hola

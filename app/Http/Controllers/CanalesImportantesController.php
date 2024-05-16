@@ -31,6 +31,7 @@ class CanalesImportantesController extends Controller
             'id_general' => 'string|max:20',
             'id_votaciones' => 'string|max:20',
             'id_sugerencias' => 'string|max:20',
+            'id_bienvenidas' => 'string|max:20',
         ]);
 
         if ($validador->fails()) {

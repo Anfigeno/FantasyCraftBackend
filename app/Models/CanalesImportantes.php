@@ -10,5 +10,6 @@ class CanalesImportantes extends Model
         'id_general',
         'id_votaciones',
         'id_sugerencias',
+        'id_bienvenidas',
     ];
 }
