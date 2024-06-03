@@ -3,6 +3,7 @@
 use App\Http\Controllers\CanalesImportantesController;
 use App\Http\Controllers\ComandoPersonalizadoController;
 use App\Http\Controllers\EmbedsController;
+use App\Http\Controllers\MensajeProgramadoController;
 use App\Http\Controllers\MensajesDelSistemaController;
 use App\Http\Controllers\RolesDeAdministracionController;
 use App\Http\Controllers\TicketsController;
@@ -49,4 +50,13 @@ Route::controller(EmbedsController::class)
     ->group(function () {
         Route::get('/', 'listar');
         Route::put('/', 'actualizar');
+    });
+
+Route::controller(MensajeProgramadoController::class)
+    ->prefix('mensajes_programados')
+    ->group(function () {
+        Route::get('/', 'listar');
+        Route::get('/{id}', 'obtener');
+        Route::put('/', 'insertar');
+        Route::put('/{id}', 'actualizar');
     });

@@ -1,0 +1,21 @@
+PUT {{APP_URL}}/api/mensajes_programados
+Content-type: application/json
+
+[
+    {
+        "titulo": "Título",
+        "descripcion": "Descripción",
+        "imagen": "https://via.placeholder.com/300x200",
+        "miniatura": "https://via.placeholder.com/300x200",
+        "tiempo": "10",
+        "id_canal": "canal",
+        "activo": true
+    },
+    {
+        "titulo": "Título",
+        "descripcion": "Descripción",
+        "tiempo": "10",
+        "id_canal": "canal",
+        "activo": true
+    }
+]
