@@ -1,0 +1,6 @@
+PUT {{APP_URL}}/api/palabras_prohibidas
+Content-Type: application/json
+
+{
+  "lista": "putamare, puta, puto, puta, puta"
+}

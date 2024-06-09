@@ -5,6 +5,7 @@ use App\Http\Controllers\ComandoPersonalizadoController;
 use App\Http\Controllers\EmbedsController;
 use App\Http\Controllers\MensajeProgramadoController;
 use App\Http\Controllers\MensajesDelSistemaController;
+use App\Http\Controllers\PalabrasProhibidasController;
 use App\Http\Controllers\RolesDeAdministracionController;
 use App\Http\Controllers\TicketsController;
 use Illuminate\Support\Facades\Route;
@@ -59,4 +60,11 @@ Route::controller(MensajeProgramadoController::class)
         Route::get('/{id}', 'obtener');
         Route::put('/', 'insertar');
         Route::put('/{id}', 'actualizar');
+    });
+
+Route::controller(PalabrasProhibidasController::class)
+    ->prefix('palabras_prohibidas')
+    ->group(function () {
+        Route::get('/', 'listar');
+        Route::put('/', 'actualizar');
     });
